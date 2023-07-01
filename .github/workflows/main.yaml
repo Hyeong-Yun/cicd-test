@@ -36,3 +36,22 @@ jobs:
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+    
+    # # Helm
+    # - name: Install Helm
+    #   run: |
+    #     curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+    # - name: Package Helm chart
+    #   run: |
+    #     helm package path/to/chart --version ${GITHUB_SHA:0:7}
+    #     mv path/to/chart-*.tgz mychart.tgz
+
+    # - name: Deploy with Argo CD
+    #   run: |
+    #     argocd app create myapp --repo <repository_url> --path <path_to_app> --dest-server https://kubernetes.default.svc --dest-namespace mynamespace --helm-set image.tag=${GITHUB_SHA:0:7} --sync-policy automated
+    #     argocd app sync myapp
+
+    # - name: Verify deployment
+    #   run: |
+    #     kubectl get pods --namespace mynamespace
