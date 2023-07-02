@@ -25,7 +25,7 @@ spec:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
+          image: "578310434439.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-test:latest"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
