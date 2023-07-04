@@ -53,8 +53,8 @@ jobs:
         cd charts/helm/templates
         sed -i "10s/.*/  - image: $ECR_REGISTRY\/$ECR_REPOSITORY:$GIT_HASH/g" deployment.yaml
         git add .
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "github-actions"
+        git config --global user.email "guddbs5545@naver.com"
+        git config --global user.name "hyeongyun"
         git commit -am "Inject Tag"
         git push
     
