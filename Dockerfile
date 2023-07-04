@@ -1,5 +1,5 @@
 # pull the official base image (Background o.s for container)
- FROM node:16.12.0
+ FROM node:16.12.0 as 
 # set working direction (directory for my project)
  WORKDIR /app
 # set environment path
