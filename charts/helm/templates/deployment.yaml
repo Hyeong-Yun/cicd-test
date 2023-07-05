@@ -15,6 +15,3 @@ spec:
       containers:
         - name: my-app-container
           image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
-      imagePullSecrets: 
-        - name: ap-northeast-2-ecr-registry
-
